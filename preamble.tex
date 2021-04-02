@@ -1,0 +1,38 @@
+\author{Florian Rasbach}
+\title{Expose zur Bachelor Thesis}
+\newcommand{\degreeCourse}{Wirtschaftsinformatik}
+\newcommand{\studentNumber}{967750}
+\newcommand{\company}{viadee AG}
+\newcommand{\filingDate}{26 Juli 2021-}
+\newcommand{\firstExaminer}{Professor Dr. Sebastian Thöne}
+\newcommand{\secondExaminer}{-Hier Zweitprüfer eintragen/-}
+\providetoggle{blockingNotice}
+\settoggle{blockingNotice}{true} % Sperrvermerk anzeigen oder ausblenden
+
+\setlength{\headheight}{14.5pt} % Damit fancyhdr keine Fehlermeldung generiert
+\setlength{\emergencystretch}{1.5em} % Für passende Wortumbrüche
+
+
+% Header und Footer Definitionen
+%---------------------------------------------
+\fancypagestyle{onlyPageNumbers}{ % Zeigt nur Footer mit Seitenzahl rechts
+    \fancyhf{}
+    \fancyfoot[C]{\thepage}
+    \fancypagestyle{plain}{%
+        \fancyhf{}%
+        \fancyfoot[R]{\thepage}%
+        \renewcommand{\headrulewidth}{0pt}
+    }
+}
+
+\fancypagestyle{toc}{ % Zeigt Footer + Header auf zweiter Seite (ToC)
+    \fancyhf{}
+    \fancyfoot[C]{\thepage}
+    \fancypagestyle{plain}{%
+        \fancyhf{}%
+        \fancyhead[R]{\nouppercase{\leftmark}}
+        \fancyfoot[R]{\thepage}%
+    }
+}
+
+\pagestyle{onlyPageNumbers}

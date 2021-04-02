@@ -1,0 +1,65 @@
+\documentclass[12pt,a4paper,oneside,ngerman]{article}
+
+\usepackage{subfiles}
+\usepackage[a4paper,left=4.5cm,right=2.5cm,top=2.5cm,bottom=2cm]{geometry}
+\usepackage{fancyhdr} % Kopf- und Fußzeile
+\usepackage[onehalfspacing]{setspace} % 1,5 facher Zeilenabstand
+\usepackage{graphicx} % Bilder einbinden
+\usepackage{titling} % Referenzen auf Titel / Autor etc. im Text
+\usepackage[hidelinks]{hyperref} % Hyperlinks im Inhaltsverzeichnis
+\usepackage[german]{babel} % Übersetzungen
+\usepackage{acronym} % Abkürzungsverzeichnis
+\usepackage[backend=biber,style=LNI]{biblatex} % Literaturverzeichnis
+\usepackage{csquotes} % Babel und Biblatex Sprachanpassungen
+\usepackage{framed} % Kästen für den Sperrvermerk
+\addbibresource{literature.bib}
+
+\input{preamble}
+
+
+\begin{document}
+
+% D E C K B L A T T
+%---------------------------------------------
+\newgeometry{margin=3cm} % Seitenränder für Deckblatt anders
+
+\begin{titlepage}
+    \begin{center}
+        \includegraphics[scale=1.25]{res/fh_logo.pdf}
+    \end{center}
+
+    \vspace*{\stretch{1.0}}
+    \begin{center}
+        \Large\textbf\thetitle\\
+        \vspace{1em}
+        \large{Abschlussarbeit im Studiengang {\degreeCourse}}\\
+        {am Fachbereich Wirtschaft der FH Münster}
+
+    \end{center}
+    \vspace*{\stretch{2.0}}
+
+    \begin{center}
+        \begin{tabular}{l l}
+            {Vorgelegt von:} & \theauthor \\
+            {Matrikelnummer:} & \studentNumber \\
+            {Erstprüfer:} & {\firstExaminer} \\
+            {Zweitprüfer:} & {\secondExaminer} \\
+            {Unternehmen:} & {\company} \\
+            {Abgabedatum:} & {\filingDate} \\
+        \end{tabular}
+    \end{center}
+\end{titlepage}
+
+\restoregeometry % Seitenränder auf Standard setzen
+
+% H A U P T T E I L
+%---------------------------------------------
+\section {Einführung zu APIs und API-Governance \textsl{(Kann übersprungen werden!)}}
+\subfile{chapters/1/einfuehrung}
+
+\section {Kontext und Aufgabenstellung}
+\subfile{chapters/2/kontext_aufgabenstellung}
+
+
+
+\end{document}
