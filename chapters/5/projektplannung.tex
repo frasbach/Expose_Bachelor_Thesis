@@ -1,0 +1,52 @@
+\documentclass[../../expose]{subfiles}
+\usepackage{array}
+
+%Dient nur als Info, es wird das preamble aus dem main-document genommen!
+% left fixed width:
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+% center fixed width:
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+% flush right fixed width:
+\newcolumntype{R}[1]{>{\raggedleft\arraybackslash}p{#1}}
+
+\begin{document}
+Bachelor (Beginn als Beispiel ab Montag den 26.04.2021)
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|C{1cm}|L{8cm}|C{2cm}|C{2cm}| }
+        \hline
+        Nr.	&Arbeitsschritt&Arbeitstage&Aufwand\\
+        \hline
+        \hline
+        1		&Arbeitsplanung											&X			& 1\%\\
+        \hline
+        2		&Literaturrecherche und-beschaffung			&X			&7\%\\
+        \hline
+        3		&Literaturauswahl und -auswertung			&X			&14\%\\
+        \hline
+        4		&Strukturieren des Materials						&X			&8\%\\
+		\hline
+		5		&Erster Gliederungsentwurf							&X			&4\%\\
+		\hline
+		6      &Gliederungsbesprechungen						&X			&1\%\\
+		\hline
+		7		&Gliederungsüberarbeitungen						&X			&3\%\\
+		\hline
+		8		&Manuskripterstellung									&X			&39\%\\
+		\hline
+		9		&Manuskriptüberarbeitungen						&X			&15\%\\
+		\hline
+		10	&Endkorrektur, Layoutgestaltung				&X			&3\%\\
+		\hline
+		11	&Drucken, Binden											&X			&1\%\\
+		\hline
+		12	&Abgabe															&X			&1\%\\
+		\hline
+        13	&Puffer															&X			&3\%\\
+        \hline
+        \multicolumn{2}{|R{9cm}|}{Gesamt}&63&100\%\\
+        \hline
+    \end{tabular}
+\end{table}%
+
+\end{document}
