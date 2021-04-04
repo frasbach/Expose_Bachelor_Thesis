@@ -15,6 +15,8 @@
 \usepackage{csquotes} % Babel und Biblatex Sprachanpassungen
 \usepackage{framed} % Kästen für den Sperrvermerk
 \usepackage{array}
+\usepackage{enumerate}
+
 
 \addbibresource{literature.bib}
 
@@ -55,7 +57,9 @@
 \end{titlepage}
 
 \restoregeometry % Seitenränder auf Standard setzen
-
+%Nummerierung auf 1.1 setzen anstatt 1.
+\renewcommand{\labelenumii}{\theenumii} 
+\renewcommand{\theenumii}{\theenumi.\arabic{enumii}}
 %Für Tabellen
 % left fixed width:
 \newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
@@ -85,5 +89,8 @@
 
 \section {Grobe Gliederung}
 \subfile{chapters/6/grobe_gliederung}
+
+\section {Literatur}
+\subfile{chapters/7/literatur}
 
 \end{document}
